@@ -1,0 +1,26 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.dropzone {
+  border: 2px dashed #cccccc;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  cursor: pointer;
+
+  position: absolute;
+  top: 7%;
+}
+
+.drop-container {
+  display:flex;
+  flex-direction: row;
+
+  position: absolute;
+  top: 3%;
+}

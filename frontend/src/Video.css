@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 20%;
+}
+
+.list-videos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    width: 30%;
+    left: 10%;
+    top: 30%;
+}
+
+.current-video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    width: 30%;
+    right: 10%;
+    top: 30%;
+}
+
+.video-list-item {
+    cursor: pointer;
+  }
+  
+  .video-list-item:hover {
+    background-color: green;
+  }
