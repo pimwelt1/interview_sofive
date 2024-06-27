@@ -613,20 +613,6 @@ ALTER TABLE ONLY public.words
 
 
 --
--- Name: TABLE metadata; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.metadata TO plm2136;
-
-
---
--- Name: TABLE words; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.words TO plm2136;
-
-
---
 -- PostgreSQL database dump complete
 --
 
