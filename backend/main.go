@@ -321,7 +321,7 @@ func searchHandler(c *gin.Context, db *sql.DB) {
 func main() {
 
 	//connect to the database
-	connStr := "user=plm2136 dbname=sofive_interview sslmode=disable"
+	connStr := "user=postgres dbname=sofive_interview sslmode=disable"
 	db, err := sql.Open("postgres", connStr)
 	if err != nil {
 		log.Fatal(err)
