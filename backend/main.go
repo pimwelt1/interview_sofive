@@ -236,8 +236,8 @@ func MP4Handler(c *gin.Context, db *sql.DB) {
 	title = strings.ReplaceAll(title, "/", "")
 	title = strings.ReplaceAll(title, "\\", "")
 
-	VideoPath := filepath.Join("./react-app/public/videos", title+".mp4")
-	AudioPath := filepath.Join("./react-app/public/audios", title+".mp3")
+	VideoPath := filepath.Join("../frontend/public/videos", title+".mp4")
+	AudioPath := filepath.Join("../audios", title+".mp3")
 
 	if title == "" {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Title is required"})
@@ -350,9 +350,10 @@ func main() {
 
 	//route to get the list of evey videos uploaded with path.
 	r.GET("/get-videos", func(c *gin.Context) {
-		videoDir := "./react-app/public/videos"
+		videoDir := "../frontend/public/videos"
 		dirEntries, err := os.ReadDir(videoDir)
 		if err != nil {
+			log.Printf("Error in /get-videos: %v", err)
 			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to read directory"})
 			return
 		}
